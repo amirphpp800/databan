@@ -477,14 +477,50 @@ html {
 .feature-icon {
     width: 24px;
     height: 24px;
-    background: #22c55e;
-    color: #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+    display: inline-block;
     flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.95043 20.6471C6.17301 19.9956 4.00437 17.827 3.35287 15.0496C2.88237 13.0437 2.88237 10.9563 3.35287 8.95043C4.00437 6.17301 6.17301 4.00437 8.95043 3.35288C10.9563 2.88237 13.0437 2.88237 15.0496 3.35287C17.827 4.00437 19.9956 6.173 20.6471 8.95043C21.1176 10.9563 21.1176 13.0437 20.6471 15.0496C19.9956 17.827 17.827 19.9956 15.0496 20.6471C13.0437 21.1176 10.9563 21.1176 8.95043 20.6471Z' stroke='%2322C55E' stroke-width='1.5'/%3E%3Cpath d='M8.95043 20.6471C10.9563 21.1176 13.0437 21.1176 15.0496 20.6471C17.827 19.9956 19.9956 17.827 20.6471 15.0496C21.1176 13.0437 21.1176 10.9563 20.6471 8.95043C19.9956 6.173 17.827 4.00437 15.0496 3.35288C13.0437 2.88237 10.9563 2.88237 8.95043 3.35288C6.173 4.00437 4.00437 6.17301 3.35287 8.95043' stroke='%2316A34A' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M9.25 11.75L11.25 13.75L14.75 10' stroke='%2322C55E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.warning-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(157, 9, 19, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(157, 9, 19, 0.3);
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.warning-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(31, 111, 209, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(31, 111, 209, 0.3);
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.info-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .feature-list strong {
@@ -831,9 +867,8 @@ a.app-card {
 }
 
 .cta-button:hover {
-    background: #16a34a;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.3);
+    background: #1ea34a;
+    transform: translateY(-1px);
 }
 
 .cta-button svg {
