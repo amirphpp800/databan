@@ -1,4 +1,4 @@
-﻿// Page Loading Manager - Enhanced for slow connections
+// Page Loading Manager - Enhanced for slow connections
 (function() {
     'use strict';
 
@@ -16,7 +16,7 @@
             <div class="loading-bar" id="loadingBar"></div>
             <div class="loader-content">
                 <div class="loader-logo">
-                    <img src="assets/logo/logo.svg" alt="دیتابــان">
+                    <img src="assets/logo/logo.svg" alt="فیلتربین">
                 </div>
                 <div class="loader-spinner">
                     <div class="spinner-ring"></div>

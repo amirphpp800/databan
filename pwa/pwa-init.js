@@ -18,8 +18,8 @@ async function registerServiceWorker() {
       return;
     }
 
-    const registration = await navigator.serviceWorker.register('/pwa/sw.js', {
-      scope: '/'
+    const registration = await navigator.serviceWorker.register('./pwa/sw.js', {
+      scope: './'
     });
 
     // Service Worker registered
@@ -62,7 +62,7 @@ function showUpdateNotification() {
   notification.className = 'pwa-update-notification';
   notification.innerHTML = `
     <div class="pwa-notification-content">
-      <p>نسخه جدید دیتابــان آماده است!</p>
+      <p>نسخه جدید فیلتربین آماده است!</p>
       <div class="pwa-notification-actions">
         <button onclick="updateServiceWorker()" class="btn btn-orange btn-sm">به‌روزرسانی</button>
         <button onclick="dismissUpdateNotification()" class="btn btn-ghost btn-sm">بعداً</button>
@@ -126,7 +126,7 @@ function setupPWAInstallPrompt() {
   }
 
   window.addEventListener('appinstalled', () => {
-    showToast('دیتابــان با موفقیت نصب شد!', 'success');
+    showToast('فیلتربین با موفقیت نصب شد!', 'success');
     deferredPrompt = null;
     hideInstallButton();
   });
@@ -195,7 +195,7 @@ function showInstallButton(isIOSDevice = false) {
           </svg>
         </div>
         <div class="pwa-install-text">
-          <strong>نصب اپلیکیشن دیتابــان</strong>
+          <strong>نصب اپلیکیشن فیلتربین</strong>
           <p>${installDescription}</p>
         </div>
         <div class="pwa-install-actions">
@@ -261,7 +261,7 @@ function showIOSInstallInstructions() {
   modal.innerHTML = `
     <div class="pwa-ios-modal-content">
       <button onclick="closeIOSModal()" class="pwa-ios-close">×</button>
-      <h3>نصب دیتابــان روی iOS</h3>
+      <h3>نصب فیلتربین روی iOS</h3>
       <div class="pwa-ios-steps">
         <div class="pwa-ios-step">
           <div class="pwa-ios-step-number">۱</div>

@@ -151,7 +151,7 @@ function populateArticleContent(article) {
 
 // Update page meta information
 function updatePageMeta(article) {
-    document.title = `${article.title} - دیتابــان`;
+    document.title = `${article.title} - فیلتربین`;
     document.getElementById('article-title').textContent = article.title;
     
     // Update meta description

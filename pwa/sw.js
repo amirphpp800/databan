@@ -7,18 +7,18 @@ const CACHE_VERSION = '1.0.0';
 
 // فایل‌های اصلی که باید کش شوند
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/css/main.css',
-  '/css/components.css',
-  '/css/responsive.css',
-  '/js/main.js',
-  '/js/components.js',
-  '/assets/Font/fontiran.css',
-  '/pwa/manifest.json',
-  '/pwa/icons/256.png',
-  '/pwa/icons/512.png',
-  '/assets/logo/logo.svg'
+  './',
+  './index.html',
+  './css/main.css',
+  './css/components.css',
+  './css/responsive.css',
+  './js/main.js',
+  './js/components.js',
+  './assets/Font/fontiran.css',
+  './pwa/manifest.json',
+  './pwa/icons/256.png',
+  './pwa/icons/512.png',
+  './assets/logo/logo.svg'
 ];
 
 // نصب Service Worker و کش کردن فایل‌های استاتیک

@@ -1,7 +1,7 @@
 {
-  "name": "دیتابــان - مرجع کامل ابزارها و مقالات کاربردی",
-  "short_name": "دیتابــان",
-  "description": "دیتابــان - مرجع کامل ابزارها و مقالات کاربردی برای توسعه‌دهندگان و طراحان",
+  "name": "فیلتربین - مرجع کامل ابزارها و مقالات کاربردی",
+  "short_name": "فیلتربین",
+  "description": "فیلتربین - مرجع کامل ابزارها و مقالات کاربردی برای توسعه‌دهندگان و طراحان",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -55,7 +55,7 @@
   "prefer_related_applications": false,
   "protocol_handlers": [
     {
-      "protocol": "web+abzarestan",
+      "protocol": "web+abzarestaan",
       "url": "/?article=%s"
     }
   ]

@@ -1,4 +1,4 @@
-﻿
+
 // Admin API to initialize sample data
 // POST /api/admin/init - Initialize sample articles in KV storage
 
@@ -44,7 +44,7 @@ export async function onRequestPost({ env }) {
                 comments: 12,
                 tags: ['هوش مصنوعی', 'سیاست', 'فناوری', 'ایران'],
                 readingTime: 8,
-                author: 'تیم تحلیلی دیتابــان',
+                author: 'تیم تحلیلی فیلتربین',
                 featuredImage: 'linear-gradient(135deg, #ff6b35, #f7931e)',
                 featured: true
             },
@@ -99,7 +99,7 @@ export async function onRequestPost({ env }) {
                 comments: 24,
                 tags: ['جنگ', 'دیجیتال', 'امنیت', 'اینترنت', 'ایران'],
                 readingTime: 8,
-                author: 'تیم تحلیلی دیتابــان',
+                author: 'تیم تحلیلی فیلتربین',
                 featuredImage: 'linear-gradient(135deg, #667eea, #764ba2)'
             },
             {
