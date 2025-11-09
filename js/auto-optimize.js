@@ -43,9 +43,9 @@ class AutoOptimizer {
         }
         
         const criticalResources = [
-            { href: '/css/main.css', as: 'style' },
-            { href: '/js/main.js', as: 'script' },
-            { href: '/assets/Font/fontiran.css', as: 'style' }
+            { href: './css/main.css', as: 'style' },
+            { href: './js/main.js', as: 'script' },
+            { href: './assets/Font/fontiran.css', as: 'style' }
         ];
 
         criticalResources.forEach(resource => {

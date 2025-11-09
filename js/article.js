@@ -1,4 +1,4 @@
-﻿
+
 // Article Page JavaScript - Updated for new structure
 
 let currentArticle = null;
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         loadComments(articleId);
     } else {
         // Redirect to home if no article ID
-        window.location.href = '/';
+        window.location.href = '../index.html';
     }
 });
 
@@ -141,7 +141,7 @@ function populateArticleContent(article) {
         const tagsContainer = document.getElementById('article-tags');
         if (tagsContainer) {
             tagsContainer.innerHTML = article.tags
-                .map(tag => `<a href="/?search=${encodeURIComponent(tag.trim())}" class="tag">#${tag.trim()}</a>`)
+                .map(tag => `<a href="../index.html?search=${encodeURIComponent(tag.trim())}" class="tag">#${tag.trim()}</a>`)
                 .join('');
         }
     }
@@ -533,7 +533,7 @@ function displayRelatedArticles(articles) {
     }
     
     const html = articles.map((article, index) => `
-        <a href="/pages/article.html?id=${article.id}" class="related-item">
+        <a href="article.html?id=${article.id}" class="related-item">
             <div class="related-item-number">${index + 1}</div>
             <div class="related-item-content">
                 <div class="related-item-title">${article.title}</div>
