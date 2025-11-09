@@ -112,12 +112,12 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "فیلتربین",
-  "url": "https://abzarestaan.pages.dev",
+  "url": "https://filterbin.space",
   "description": "مرجع کامل ابزارهای دیجیتال",
   "inLanguage": "fa",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://abzarestaan.pages.dev/?s={search_term_string}",
+    "target": "https://filterbin.space/?s={search_term_string}",
     "query-input": "required name=search_term_string"
   },
   "publisher": {
@@ -125,7 +125,7 @@
     "name": "فیلتربین",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://abzarestaan.pages.dev/assets/logo/logo.svg"
+      "url": "https://filterbin.space/assets/logo/logo.svg"
     }
   }
 }

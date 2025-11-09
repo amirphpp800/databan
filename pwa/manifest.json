@@ -55,7 +55,7 @@
   "prefer_related_applications": false,
   "protocol_handlers": [
     {
-      "protocol": "web+abzarestaan",
+      "protocol": "web+filterbin",
       "url": "/?article=%s"
     }
   ]

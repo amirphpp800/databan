@@ -1,5 +1,5 @@
 # فیلتربین - Robots.txt
-# Website: https://abzarestaan.pages.dev
+# Website: https://filterbin.space
 
 # Allow all search engines
 User-agent: *
@@ -18,7 +18,7 @@ Disallow: /README.md
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://abzarestaan.pages.dev/sitemap.xml
+Sitemap: https://filterbin.space/sitemap.xml
 
 # Specific rules for major search engines
 User-agent: Googlebot
