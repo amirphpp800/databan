@@ -1,0 +1,5 @@
+# 404 redirect
+/* /404.html 404
+
+# Redirect old paths (if needed)
+# /old-path /new-path 301
