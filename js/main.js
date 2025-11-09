@@ -504,12 +504,6 @@ function toggleMobileMenu() {
 
 // ArticleCard, ToolCard, and LoadingSkeleton classes are defined in components.js
 
-// Placeholder for Toast notifications
-class Toast {
-    static show(message, type = 'info') {
-        console.log(`Toast (${type}): ${message}`);
-        // In a real app, this would display a visible notification to the user.
-    }
-}
+// Toast notifications are defined in notifications.js
 
 // Search functionality is defined in components.js (Search class and searchInstance)

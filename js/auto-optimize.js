@@ -208,7 +208,6 @@ class AutoOptimizer {
                 );
                 
                 if (!isAllowed) {
-                    console.warn('Blocked potentially unsafe inline script');
                     script.remove();
                 }
             }

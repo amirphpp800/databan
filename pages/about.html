@@ -11,45 +11,26 @@
     <meta name="theme-color" content="#9D0913">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/logo.svg">
+    <link rel="apple-touch-icon" href="../assets/logo/favicon.svg">
+    <link rel="shortcut icon" href="../assets/logo/favicon.svg">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/Font/fontiran.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="stylesheet" href="../css/ai-notification.css">
+    <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
-    <!-- Top Header -->
-    <header class="top-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-right">
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="منو">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                    <nav class="main-nav" id="mainNav">
-                        <a href="../index.html" class="nav-item">خانه</a>
-                        <a href="tools.html" class="nav-item">ابزارها</a>
-                        <a href="articles.html" class="nav-item">یادداشت‌ها</a>
-                        <a href="podcasts.html" class="nav-item">پادکست‌ها</a>
-                        <a href="about.html" class="nav-item">درباره</a>
-                    </nav>
-                </div>
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem;">
-                            <span class="logo-text">دیتابــان</span>
-                            <img src="../assets/logo/logo.svg" alt="دیتابــان" class="logo-icon">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Search Modal Placeholder -->
+    <div id="search-modal-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -104,11 +85,15 @@
         </div>
     </main>
 
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
     <!-- Scripts -->
+    <script src="../js/component-loader.js"></script>
+    <script src="../js/ai-notification.js"></script>
     <script src="../js/auto-optimize.js"></script>
     <script src="../js/components.js"></script>
     <script src="../js/main.js"></script>
-    <script src="../js/mobile-menu.js"></script>
     <script src="../pwa/pwa-init.js"></script>
 </body>
 </html>

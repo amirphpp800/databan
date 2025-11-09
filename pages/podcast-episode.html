@@ -11,7 +11,9 @@
     <meta name="theme-color" content="#9D0913">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/logo.svg">
+    <link rel="apple-touch-icon" href="../assets/logo/favicon.svg">
+    <link rel="shortcut icon" href="../assets/logo/favicon.svg">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/Font/fontiran.css">
@@ -19,6 +21,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="stylesheet" href="../css/ai-notification.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
         .episode-container {
@@ -521,35 +525,11 @@
     </style>
 </head>
 <body>
-    <!-- Top Header -->
-    <header class="top-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-right">
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="منو">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                    <nav class="main-nav" id="mainNav">
-                        <a href="../index.html" class="nav-item">خانه</a>
-                        <a href="tools.html" class="nav-item">ابزارها</a>
-                        <a href="articles.html" class="nav-item">یادداشت‌ها</a>
-                        <a href="podcasts.html" class="nav-item">پادکست‌ها</a>
-                        <a href="about.html" class="nav-item">درباره</a>
-                    </nav>
-                </div>
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem;">
-                            <span class="logo-text">دیتابــان</span>
-                            <img src="../assets/logo/logo.svg" alt="دیتابــان" class="logo-icon">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Search Modal Placeholder -->
+    <div id="search-modal-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -667,64 +647,12 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>ابـزارستـان</h4>
-                    <p>پلتفرمی برای به اشتراک‌گذاری دانش و ابزارهای کاربردی</p>
-                    <div class="social-media">
-                        <h5>سوشـال مدیـا</h5>
-                        <div class="social-links">
-                            <a href="https://t.me/iEnuma" class="social-link" aria-label="Telegram" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="X (Twitter)" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="YouTube" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>دسترسی سریع</h4>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">خانه</a></li>
-                        <li><a href="tools.html">ابزارها</a></li>
-                        <li><a href="articles.html">یادداشت‌ها</a></li>
-                        <li><a href="podcasts.html">پادکست‌ها</a></li>
-                        <li><a href="about.html">درباره ما</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>ارتباط با ما</h4>
-                    <div class="contact-info">
-                        <a href="mailto:databann@proton.me" class="contact-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>databann@proton.me</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; ۱۴۰۴ ابـزارستـان. تمامی حقوق محفوظ است.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
+    <script src="../js/component-loader.js"></script>
+    <script src="../js/ai-notification.js"></script>
     <script src="../js/loading.js"></script>
     <script src="../js/notifications.js"></script>
     <script src="../js/auto-optimize.js"></script>

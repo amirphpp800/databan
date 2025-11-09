@@ -18,7 +18,7 @@
     margin: 0 auto;
     padding: 0 2rem;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: visible;
 }
 
 /* Top Header */
@@ -30,8 +30,7 @@
     z-index: 1000;
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: visible;
 }
 
 .header-content {
@@ -40,7 +39,7 @@
     align-items: center;
     gap: 2rem;
     max-width: 100%;
-    overflow: hidden;
+    overflow: visible;
     flex-direction: row-reverse;
 }
 
@@ -49,14 +48,15 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
+    overflow: visible;
 }
 
 .header-right .main-nav {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     flex-wrap: nowrap;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .header-left {
@@ -68,21 +68,23 @@
 .nav-item {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.5rem 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
     display: inline-block;
     flex-shrink: 0;
-    white-space: nowrap;
 }
 
 /* Hide mobile menu elements on desktop */
 .mobile-menu-grid,
 .mobile-menu-section-title,
 .mobile-menu-links,
-.mobile-search-box {
+.mobile-search-box,
+.mobile-tools-section {
     display: none;
 }
 
@@ -288,12 +290,10 @@
     overflow: hidden;
     min-height: 100px;
     max-height: 130px;
-    transition: all 0.3s ease;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .feature-card:hover {
-    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -328,7 +328,8 @@
 }
 
 .feature-card.podcast-card:hover {
-    border: none !important;
+    border: 1px solid rgba(255, 140, 0, 0.1) !important;
+    background: linear-gradient(135deg, rgba(42, 24, 16, 0.7) 0%, rgba(61, 36, 24, 0.8) 100%);
 }
 
 .podcast-icon-wrapper {
@@ -390,7 +391,8 @@
 }
 
 .feature-card.privacy-card:hover {
-    border: none !important;
+    border: 1px solid rgba(138, 43, 226, 0.1) !important;
+    background: linear-gradient(135deg, rgba(26, 15, 46, 0.7) 0%, rgba(45, 27, 78, 0.8) 100%);
 }
 
 .privacy-banner {

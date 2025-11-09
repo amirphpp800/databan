@@ -1,4 +1,4 @@
-﻿// PWA Initialization Script
+// PWA Initialization Script
 // ثبت و مدیریت Service Worker
 
 // بررسی پشتیبانی از Service Worker
@@ -15,7 +15,6 @@ async function registerServiceWorker() {
   try {
     // بررسی اینکه آیا در محیط مناسب هستیم
     if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-      console.log('⚠️ Service Worker requires HTTPS or localhost');
       return;
     }
 
@@ -23,12 +22,12 @@ async function registerServiceWorker() {
       scope: '/'
     });
 
-    console.log('✅ Service Worker registered successfully:', registration.scope);
+    // Service Worker registered
 
     // بررسی به‌روزرسانی
     registration.addEventListener('updatefound', () => {
       const newWorker = registration.installing;
-      console.log('🔄 Service Worker update found');
+      // Service Worker update found
 
       newWorker.addEventListener('statechange', () => {
         if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -40,17 +39,15 @@ async function registerServiceWorker() {
 
     // مدیریت پیام‌های Service Worker
     navigator.serviceWorker.addEventListener('message', (event) => {
-      console.log('📨 Message from SW:', event.data);
+      // Message from SW
     });
 
     // بررسی وضعیت آنلاین/آفلاین
     window.addEventListener('online', () => {
-      console.log('🌐 Back online');
       showToast('اتصال اینترنت برقرار شد', 'success');
     });
 
     window.addEventListener('offline', () => {
-      console.log('📵 Gone offline');
       showToast('در حالت آفلاین هستید', 'warning');
     });
 
@@ -129,7 +126,6 @@ function setupPWAInstallPrompt() {
   }
 
   window.addEventListener('appinstalled', () => {
-    console.log('✅ PWA installed successfully');
     showToast('دیتابــان با موفقیت نصب شد!', 'success');
     deferredPrompt = null;
     hideInstallButton();
@@ -171,7 +167,6 @@ function showInstallButton(isIOSDevice = false) {
   if (dismissedTime) {
     const timeSinceDismissed = Date.now() - parseInt(dismissedTime);
     if (timeSinceDismissed < sevenDaysInMs) {
-      console.log('نوتیفیکیشن نصب PWA قبلاً بسته شده - نمایش داده نمی‌شود');
       return;
     }
   }
@@ -313,8 +308,6 @@ async function installPWA() {
   deferredPrompt.prompt();
   const { outcome } = await deferredPrompt.userChoice;
   
-  console.log(`User response to install prompt: ${outcome}`);
-  
   if (outcome === 'accepted') {
     showToast('در حال نصب...', 'info');
   }
@@ -371,11 +364,7 @@ function isPWAInstalled() {
 }
 
 if (isPWAInstalled()) {
-  console.log('✅ Running as PWA');
   document.documentElement.classList.add('pwa-installed');
-} else {
-  console.log('📱 Device:', isMobile() ? 'Mobile' : 'Desktop');
-  console.log('🍎 iOS:', isIOS() ? 'Yes' : 'No');
 }
 
 // Export برای استفاده در سایر فایل‌ها
@@ -385,5 +374,3 @@ window.PWA = {
   isInstalled: isPWAInstalled,
   showToast: showToast
 };
-
-console.log('🚀 PWA initialized');

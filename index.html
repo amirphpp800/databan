@@ -12,18 +12,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 
     <!-- PWA -->
-    <link rel="manifest" href="/pwa/manifest.json">
+    <link rel="manifest" href="pwa/manifest.json">
     <meta name="theme-color" content="#9D0913">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo.svg">
-    <link rel="apple-touch-icon" href="/assets/logo/favicon.svg">
-    <link rel="shortcut icon" href="/assets/logo/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+    <link rel="apple-touch-icon" href="assets/logo/favicon.svg">
+    <link rel="shortcut icon" href="assets/logo/favicon.svg">
 
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="/assets/Font/fontiran.css" as="style">
-    <link rel="preload" href="/css/main.css" as="style">
-    <link rel="preload" href="/assets/logo/logo.svg" as="image">
+    <link rel="preload" href="assets/Font/fontiran.css" as="style">
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="assets/logo/logo.svg" as="image">
 
     <!-- Critical CSS - Inline for faster render -->
     <style>
@@ -60,16 +60,18 @@
     </style>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/Font/fontiran.css">
-    <link rel="stylesheet" href="/css/loading.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/search.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/pwa/pwa-styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/Font/fontiran.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/ai-notification.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="pwa/pwa-styles.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="/pwa/pwa-styles.css">
+        <link rel="stylesheet" href="pwa/pwa-styles.css">
     </noscript>
 
     <!-- Fallback for no JavaScript -->
@@ -90,12 +92,11 @@
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
         <div style="text-align: center;">
+            <img src="assets/logo/logotype.svg" alt="دیتابــان"
+                style="height: 60px; width: auto; margin-bottom: 2rem; opacity: 0.95;">
             <div class="loading-spinner"
-                style="width: 60px; height: 60px; border: 5px solid rgba(157, 9, 19, 0.1); border-top: 5px solid #9D0913; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1.5rem;">
+                style="width: 50px; height: 50px; border: 4px solid rgba(157, 9, 19, 0.1); border-top: 4px solid #9D0913; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem;">
             </div>
-            <img src="/assets/logo/logo.svg" alt="دیتابــان"
-                style="width: 80px; height: 80px; margin-bottom: 1rem; opacity: 0.9;">
-            <h2 style="color: #fff; font-size: 1.5rem; margin: 0 0 0.5rem 0; font-weight: 700;">دیتابــان</h2>
             <p style="color: rgba(255,255,255,0.7); font-size: 1rem; margin: 0;">در حال بارگذاری...</p>
         </div>
     </div>
@@ -121,147 +122,11 @@
         }
     </style>
 
-    <!-- Top Header -->
-    <header class="top-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-right">
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="منو">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                    <nav class="main-nav" id="mainNav">
-                        <div class="mobile-menu-grid">
-                            <a href="index.html" class="mobile-menu-card">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                </svg>
-                                <span>خانه</span>
-                            </a>
-                            <a href="pages/tools.html" class="mobile-menu-card">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                                    </path>
-                                </svg>
-                                <span>ابزارها</span>
-                            </a>
-                            <a href="pages/articles.html" class="mobile-menu-card">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                                </svg>
-                                <span>یادداشت‌ها</span>
-                            </a>
-                            <a href="pages/podcasts.html" class="mobile-menu-card">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                                    <line x1="12" y1="19" x2="12" y2="23"></line>
-                                    <line x1="8" y1="23" x2="16" y2="23"></line>
-                                </svg>
-                                <span>پادکست‌ها</span>
-                            </a>
-                            <a href="pages/about.html" class="mobile-menu-card">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 17V11" stroke="#ff4444" stroke-width="1.5" stroke-linecap="round">
-                                    </path>
-                                    <circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 11 9)" fill="#ff4444">
-                                    </circle>
-                                    <path
-                                        d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
-                                        stroke="#ff4444" stroke-width="1.5" stroke-linecap="round"></path>
-                                </svg>
-                                <span>درباره</span>
-                            </a>
-                        </div>
-                        <button class="mobile-search-box" id="mobileSearchBtn">
-                            <span>جستجو</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                            </svg>
-                        </button>
-                        <a href="index.html" class="nav-item desktop-only">خانه</a>
-                        <a href="pages/tools.html" class="nav-item desktop-only">ابزارها</a>
-                        <a href="pages/articles.html" class="nav-item desktop-only">یادداشت‌ها</a>
-                        <a href="pages/podcasts.html" class="nav-item desktop-only">پادکست‌ها</a>
-                        <a href="pages/about.html" class="nav-item desktop-only">درباره</a>
-                        <div class="header-search-wrapper">
-                            <div class="header-search-container" id="headerSearchContainer">
-                                <input type="text" class="header-search-input" id="headerSearchInput"
-                                    placeholder="جستجو..." readonly>
-                                <button class="header-search-icon" id="headerSearchBtn" aria-label="جستجو">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <circle cx="11" cy="11" r="8"></circle>
-                                        <path d="m21 21-4.35-4.35"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="header-left">
-                    <div class="logo">
-                        <div class="logo-icon-wrapper">
-                            <img src="/assets/logo/logo.svg" alt="دیتابــان" class="logo-icon">
-                        </div>
-                        <span class="logo-text">دیتابــان</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
-    <!-- Search Modal -->
-    <div class="search-overlay" id="searchOverlay"></div>
-    <div class="search-modal" id="searchModal">
-        <div class="search-header">
-            <div class="search-input-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" class="search-input" id="searchInput"
-                    placeholder="جستجو در مقالات، ابزارها و پادکست‌ها...">
-            </div>
-            <button class="search-close-btn" id="searchCloseBtn" aria-label="بستن">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-        <div class="search-tags">
-            <div class="search-tags-title">برچسب‌های پرطرفدار:</div>
-            <div class="search-tags-list">
-                <a href="#" class="search-tag" data-tag="اینترنت">اینترنت</a>
-                <a href="#" class="search-tag" data-tag="فیلترینگ">فیلترینگ</a>
-                <a href="#" class="search-tag" data-tag="امنیت">امنیت</a>
-                <a href="#" class="search-tag" data-tag="هوش مصنوعی">هوش مصنوعی</a>
-                <a href="#" class="search-tag" data-tag="سانسور">سانسور</a>
-            </div>
-        </div>
-        <div class="search-results" id="searchResults">
-            <div class="search-empty">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <p>جستجو کنید</p>
-                <small>مقالات، ابزارها و پادکست‌ها را جستجو کنید</small>
-            </div>
-        </div>
-    </div>
+    <!-- Search Modal Placeholder -->
+    <div id="search-modal-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -270,10 +135,10 @@
                 <!-- Top Cards -->
                 <section class="top-cards">
                     <a href="pages/podcast-layeh7.html" class="feature-card podcast-card"
-                        style="text-decoration: none;">
+                        style="text-decoration: none; transform: none !important;">
                         <div class="podcast-icon-wrapper">
                             <div class="podcast-icon-bg"></div>
-                            <img src="/assets/images/audio.png" alt="Podcast Icon" class="podcast-icon" loading="lazy">
+                            <img src="assets/images/audio.png" alt="Podcast Icon" class="podcast-icon" loading="lazy">
                         </div>
                         <div class="card-content">
                             <h3>پادکست لایه هفتم</h3>
@@ -282,9 +147,9 @@
                         </div>
                     </a>
 
-                    <a href="pages/iran-off.html" class="feature-card privacy-card" style="text-decoration: none;">
+                    <a href="pages/iran-off.html" class="feature-card privacy-card" style="text-decoration: none; transform: none !important;">
                         <div class="privacy-banner">
-                            <img src="/assets/images/globe.svg" alt="Globe" class="privacy-banner-img" loading="lazy"
+                            <img src="assets/images/globe.svg" alt="Globe" class="privacy-banner-img" loading="lazy"
                                 onerror="this.style.display='none'">
                         </div>
                         <div class="card-content">
@@ -293,9 +158,9 @@
                         </div>
                     </a>
 
-                    <a href="pages/bpb-guide.html" class="feature-card cloudflare-card" style="text-decoration: none;">
+                    <a href="pages/bpb-guide.html" class="feature-card cloudflare-card" style="text-decoration: none; transform: none !important;">
                         <div class="cloudflare-bg-icon">
-                            <img src="/assets/images/BPB-card.svg" alt="BPB Icon" loading="lazy">
+                            <img src="assets/images/BPB-card.svg" alt="BPB Icon" loading="lazy">
                         </div>
                         <div class="card-content">
                             <h3>دسترسی به اینترنت آزاد با کلودفلر</h3>
@@ -313,7 +178,7 @@
                     <div class="suggested-articles">
                         <a href="/pages/article.html?id=1" class="suggested-item">
                             <div class="suggested-thumbnail">
-                                <img src="/assets/images/ai.png" alt="هوش مصنوعی" loading="lazy">
+                                <img src="assets/images/ai.png" alt="هوش مصنوعی" loading="lazy">
                             </div>
                             <div class="suggested-content">
                                 <h4>کنترل به جای نوآوری؛ روایت توسعه نامتوازن هوش مصنوعی در ایران</h4>
@@ -323,7 +188,7 @@
 
                         <a href="/pages/article.html?id=2" class="suggested-item">
                             <div class="suggested-thumbnail">
-                                <img src="/assets/images/war.png" alt="جنگ دیجیتال" loading="lazy">
+                                <img src="assets/images/war.png" alt="جنگ دیجیتال" loading="lazy">
                             </div>
                             <div class="suggested-content">
                                 <h4>میراث جنگ ۱۲ روزه: غلبه نگاه امنیتی بر اکوسیستم دیجیتال و شبکه اینترنت</h4>
@@ -333,7 +198,7 @@
 
                         <a href="/pages/article.html?id=3" class="suggested-item">
                             <div class="suggested-thumbnail">
-                                <img src="/assets/images/sms.png" alt="سانسور پیامک" loading="lazy">
+                                <img src="assets/images/sms.png" alt="سانسور پیامک" loading="lazy">
                             </div>
                             <div class="suggested-content">
                                 <h4>از اینترنت تا پیامک؛ گسترش سانسور به آخرین کانال ارتباطی</h4>
@@ -347,7 +212,7 @@
                 <section class="main-article-section">
                     <div class="article-hero">
                         <div class="article-visual">
-                            <img src="/assets/images/network.png" alt="از اینترنت طبقاتی تا اعلام شروط رفع فیلتر تلگرام"
+                            <img src="assets/images/network.png" alt="از اینترنت طبقاتی تا اعلام شروط رفع فیلتر تلگرام"
                                 class="article-hero-image" loading="eager">
                         </div>
                         <div class="article-content">
@@ -371,7 +236,7 @@
                     </svg>
                 </div>
                 <a href="pages/article.html?id=5" class="cyber-main-card">
-                    <img src="/assets/images/network.png" alt="شبکه و سیاستگذاری" class="cyber-image" loading="lazy">
+                    <img src="assets/images/network.png" alt="شبکه و سیاستگذاری" class="cyber-image" loading="lazy">
                     <div class="cyber-content">
                         <div class="cyber-badge network-badge">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -409,7 +274,7 @@
                     </svg>
                 </div>
                 <div class="cyber-main-card">
-                    <img src="/assets/images/cyber.png" alt="تهدیدات سایبری" class="cyber-image" loading="lazy">
+                    <img src="assets/images/cyber.png" alt="تهدیدات سایبری" class="cyber-image" loading="lazy">
                     <div class="cyber-content">
                         <div class="cyber-badge">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -464,75 +329,8 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>دیتابــان</h4>
-                    <p>پلتفرمی برای به اشتراک‌گذاری دانش و ابزارهای کاربردی</p>
-                    <div class="social-media">
-                        <h5>سوشـال مدیـا</h5>
-                        <div class="social-links">
-                            <a href="https://t.me/iEnuma" class="social-link" aria-label="Telegram" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="X (Twitter)" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="YouTube" target="_blank">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>دسترسی سریع</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">خانه</a></li>
-                        <li><a href="pages/tools.html">ابزارها</a></li>
-                        <li><a href="pages/articles.html">یادداشت‌ها</a></li>
-                        <li><a href="pages/podcasts.html">پادکست‌ها</a></li>
-                        <li><a href="pages/about.html">درباره ما</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>ارتباط با ما</h4>
-                    <div class="contact-info">
-                        <a href="mailto:databann@proton.me" class="contact-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>databann@proton.me</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <button id="installPWAFooter" class="install-pwa-btn" onclick="installPWA()" style="display: none;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    نصب اپلیکیشن
-                </button>
-                <p>&copy; ۱۴۰۴ دیتابــان. تمامی حقوق محفوظ است.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <!-- Scripts -->
     <script>
@@ -561,14 +359,16 @@
             setTimeout(hidePageLoader, 2000);
         }
     </script>
-    <script src="/js/page-transitions.js"></script>
-    <script src="/js/notifications.js"></script>
-    <script src="/js/auto-optimize.js"></script>
-    <script src="/js/components.js"></script>
-    <script src="/js/search.js"></script>
-    <script src="/js/header-component.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/pwa/pwa-init.js"></script>
+    <!-- Component Loader - باید قبل از بقیه اسکریپت‌ها لود بشه -->
+    <script src="js/component-loader.js"></script>
+    <script src="js/ai-notification.js"></script>
+    <script src="js/page-transitions.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/auto-optimize.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+    <script src="pwa/pwa-init.js"></script>
 
     <!-- Auto Load Latest Articles -->
     <script>

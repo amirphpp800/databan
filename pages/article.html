@@ -12,99 +12,28 @@
     <meta name="theme-color" content="#9D0913">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo.svg">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo/logo.svg">
+    <link rel="apple-touch-icon" href="../assets/logo/favicon.svg">
+    <link rel="shortcut icon" href="../assets/logo/favicon.svg">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/Font/fontiran.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="stylesheet" href="../css/ai-notification.css">
     <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/article.css">
     <link rel="stylesheet" href="../css/article-template.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
-    <!-- Top Header -->
-    <header class="top-header">
-        <div class="container-fluid">
-            <div class="header-content">
-                <div class="header-right">
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="منو">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                    <nav class="main-nav" id="mainNav">
-                        <a href="../index.html" class="nav-item desktop-only">خانه</a>
-                        <a href="tools.html" class="nav-item desktop-only">ابزارها</a>
-                        <a href="articles.html" class="nav-item desktop-only">یادداشت‌ها</a>
-                        <a href="podcasts.html" class="nav-item desktop-only">پادکست‌ها</a>
-                        <a href="about.html" class="nav-item desktop-only">درباره</a>
-                        <div class="header-search-wrapper">
-                            <div class="header-search-container" id="headerSearchContainer">
-                                <input type="text" class="header-search-input" id="headerSearchInput" placeholder="جستجو..." readonly>
-                                <button class="header-search-icon" id="headerSearchBtn" aria-label="جستجو">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="11" cy="11" r="8"></circle>
-                                        <path d="m21 21-4.35-4.35"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem;">
-                            <span class="logo-text">دیتابــان</span>
-                            <img src="../assets/logo/logo.svg" alt="دیتابــان" class="logo-icon">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
-    <!-- Search Modal -->
-    <div class="search-overlay" id="searchOverlay"></div>
-    <div class="search-modal" id="searchModal">
-        <div class="search-header">
-            <div class="search-input-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" class="search-input" id="searchInput" placeholder="جستجو در مقالات، ابزارها و پادکست‌ها...">
-            </div>
-            <button class="search-close-btn" id="searchCloseBtn" aria-label="بستن">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-        <div class="search-tags">
-            <div class="search-tags-title">برچسب‌های پرطرفدار:</div>
-            <div class="search-tags-list">
-                <a href="#" class="search-tag" data-tag="اینترنت">اینترنت</a>
-                <a href="#" class="search-tag" data-tag="فیلترینگ">فیلترینگ</a>
-                <a href="#" class="search-tag" data-tag="امنیت">امنیت</a>
-                <a href="#" class="search-tag" data-tag="هوش مصنوعی">هوش مصنوعی</a>
-                <a href="#" class="search-tag" data-tag="سانسور">سانسور</a>
-            </div>
-        </div>
-        <div class="search-results" id="searchResults">
-            <div class="search-empty">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <p>جستجو کنید</p>
-                <small>مقالات، ابزارها و پادکست‌ها را جستجو کنید</small>
-            </div>
-        </div>
-    </div>
+    <!-- Search Modal Placeholder -->
+    <div id="search-modal-placeholder"></div>
 
     <!-- Article Container -->
     <div class="article-container">
@@ -135,14 +64,18 @@
         }
     </style>
 
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
     <!-- Scripts -->
+    <script src="../js/component-loader.js"></script>
+    <script src="../js/ai-notification.js"></script>
     <script src="../js/page-transitions.js"></script>
     <script src="../js/notifications.js"></script>
     <script src="../js/auto-optimize.js"></script>
     <script src="../js/article.js"></script>
     <script src="../js/components.js"></script>
     <script src="../js/search.js"></script>
-    <script src="../js/header-component.js"></script>
     <script src="../js/main.js"></script>
     <script src="../pwa/pwa-init.js"></script>
     
