@@ -1234,6 +1234,12 @@
 }
 
 .social-link:nth-child(3):hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.social-link:nth-child(4):hover {
     background: rgba(255, 0, 0, 0.2);
     border-color: #ff0000;
     color: #ff0000;
