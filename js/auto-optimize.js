@@ -59,6 +59,10 @@ class AutoOptimizer {
 
     // Auto compression detection and handling
     setupCompression() {
+        // DISABLED: WebP/AVIF optimization
+        // Uncomment below if you have WebP/AVIF versions of your images
+        
+        /*
         // Disabled for file:// protocol to avoid CORS issues
         if (window.location.protocol === 'file:') {
             return;
@@ -76,6 +80,7 @@ class AutoOptimizer {
                 img.addEventListener('load', () => this.optimizeImage(img));
             }
         });
+        */
     }
 
     checkWebPSupport() {
